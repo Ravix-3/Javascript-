@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Length Converter</title>
+</head>
+<body>
+  <script>
+    function convertMilesToKilometers(miles){
+      return miles * 1.60934;
+    }
+    function convertKilometerToMiles(kilometers){
+      return kilometers / 1.60934;
+    }
+    function convertFeetTokilometers(feet){
+      return feet / 3281;
+    }
+    function convertKilometerToFeet(kilometers){
+      return kilometers * 3281;
+    }
+    function connvertMilesToFeet(miles){
+      return miles * 5280;
+    }
+    function convertFeetToMiles(feet){
+      return feet / 5280;
+    }
+    
+    function convertLength(length,from, to){
+         if (from !== 'kilometers' && from !== 'miles' && from !== 'feet') {
+          return `Invalid unit: ${from}`;
+        } else if (to !== 'kilometers' && to !== 'miles' && to !== 'feet') {
+          return `Invalid unit: ${to}`;
+        }
+        
+      if(from ==='miles' &&  to=== 'kilometers'){
+        let distance=convertMilesToKilometers(length);
+        console.log(`${distance.toFixed(3)} km`);
+      }
+      else if(from =='kilometers' && to ==='miles'){
+        let distance=convertKilometerToMiles(length);
+        console.log(`${distance.toFixed(3)} miles`);
+      }
+      else if(from ==='feet' && to === 'kilometers'){
+        let distance=convertFeetTokilometers(length);
+        console.log(`${distance.toFixed(3)} km`);
+      }
+      else if(from ==='kilometers' && to ==='feet'){
+        let distance=convertKilometerToFeet(length);
+        console.log(`${distance.toFixed(3)} feet`); 
+      }
+      else if(from ==='miles' && to === 'feet'){
+        let distance=connvertMilesToFeet(length);
+        console.log(`${distance.toFixed(3)} feet`);
+      }
+      else if(from ==='feet' && to === 'miles'){
+        let distance=convertFeetToMiles(length);
+        console.log(`${distance.toFixed(3)} miles`);
+      }
+      else if(from === to){
+        console.log(`${length} ${to}`);
+      }
+    }
+    convertLength(10, 'miles', 'kilometers'); // 16.0934km
+    convertLength(32,'kilometers','miles');// 19.883 miles
+    convertLength(100,'feet','kilometers'); 
+    convertLength(100,'kilometers','feet'); 
+    convertLength(5,'miles','kilometers'); 
+    convertLength(5,'miles','feet'); // 52800 feet
+    convertLength(5,'kilometers','feet'); // 0.019 miles
+    convertLength(5,'miles','miles'); // 5 miles
+    convertLength(5,'kilometers','kilometers'); // 5 kilometers
+    convertLength(5,'feet','feet'); // 5 feet
+    convertLength(5,'lbs','miles'); // Invalid conversion
+  </script>
+</body>
+</html>

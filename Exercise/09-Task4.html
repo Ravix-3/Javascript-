@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <input placeholder="Cost Of Product" class="js-cost-input" onkeydown="
+    if(event.key === 'Enter'){
+      calculate();
+    }">
+
+  <button class="js-calculate" 
+  onclick="calculate()">
+  Calculate</button>
+
+  <p class="js-total-cost"></p>
+  
+  <script>
+      function calculate(){
+        const inputCost = document.querySelector('.js-cost-input');
+        let cost = Number(inputCost.value)*100;
+        if(cost < 4000){
+          cost = cost + 1000;
+        }
+        document.querySelector('.js-total-cost').innerHTML = `Total Cost: $${cost/100}`;
+        console.log(`$${cost/100}`);
+      }
+  </script>
+</body>
+</html>

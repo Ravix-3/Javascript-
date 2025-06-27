@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart Quantity</title>
+</head>
+<body>
+  <button onclick="
+   updateCartQuantity(0, '+');"
+  >Show Quantity</button>
+  <button onclick="
+   updateCartQuantity(1, '+');"
+  >Add to Cart</button>
+  <button onclick="
+    updateCartQuantity(2, '+');">+2</button>
+  <button onclick="
+    updateCartQuantity(3, '+');">+3</button>
+  <button onclick="
+    updateCartQuantity(4, '+');">+4</button>
+  <button onclick="
+    updateCartQuantity(5, '+');">+5</button>
+  <button onclick="
+    updateCartQuantity(1, '-');">Remove from Cart</button>
+  <button onclick="
+    updateCartQuantity(2, '-');">-2</button>
+  <button onclick="
+    updateCartQuantity(3, '-');">-3</button>
+  <button onclick="
+  cartQuantity =0;
+ showCartQuantity(cartQuantity);
+ ">Reset</button>
+  <p class="js-cart-quantity"></p>
+   <script>
+   let cartQuantity = 0;
+   function updateCartQuantity(value, operator){
+      if(operator ==='+')
+      {
+        if(cartQuantity + value > 10) {
+          alert('The Cart is full');
+          return;
+        } else {
+          cartQuantity += value;
+          showCartQuantity(cartQuantity);
+        }
+      }
+      else{
+        if(cartQuantity - value < 0){
+        alert('The Cart is empty');
+       } else{
+        cartQuantity-=value;
+       showCartQuantity(cartQuantity);
+      }
+      }
+   }
+   function showCartQuantity(cartQuantity){
+     document.querySelector('.js-cart-quantity').innerText = 'Cart Quantity :'+ cartQuantity;
+   }
+  </script>
+</body>
+</html>

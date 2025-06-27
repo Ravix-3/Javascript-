@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart-Quantity Items</title>
+</head>
+<body>
+  <h1>Cart Quantity</h1>
+  <!-- Show Quantity -->
+  <button onclick="console.log('Cart Quantity:', cartQuantity);">
+    Show Quantity
+  </button>
+<!-- Add TO cart -->
+  <button onclick="
+  if(cartQuantity + 1 >10) {
+    console.log('Cart is full');
+  } else {
+    cartQuantity++;
+    console.log('Cart Quantity:', cartQuantity);
+  }
+  ">Add To Cart</button>
+<!-- Add 2 items to cart -->
+<button onclick="
+if(cartQuantity +2 >10) {
+  console.log('Cart is full');
+} else {
+  cartQuantity += 2;
+  console.log('Cart Quantity:', cartQuantity);
+}">
+  +2
+</button>
+<!--  Add 3 items to cart -->
+  <button onclick ="
+  if(cartQuantity +3 >10){
+    console.log('Cart is full');
+  } else{
+    cartQuantity +=3;
+    console.log('Cart Quantity:',cartQuantity);
+  }
+  ">
+    +3
+  </button>
+<!-- Add 4 items to cart -->
+ <button onclick="
+ if(cartQuantity + 4>10){
+  console.log('Cart is full');
+ } else{
+  cartQuantity +=4;
+  console.log('Cart Quantity:',cartQuantity);
+ }
+ ">
+  +4
+ </button>
+<!-- Add 5 items to cart -->
+  <button onclick="
+  if(cartQuantity +5>10){
+    console.log('Cart is full');
+  }
+  else{
+    cartQuantity+=5;
+    console.log('Cart Quantity:',cartQuantity);
+  }
+  ">
+    +5  
+    </button>
+
+<!-- Remove from cart -->
+ <button onclick="
+ if(cartQuantity -1<0){
+  console.log('Cart is empty');
+ } else{
+  cartQuantity--;
+  console.log('Cart Quantity:', cartQuantity);
+ }
+ ">
+  Remove from Cart
+ </button>
+ <!-- Remove 2 items from cart -->
+  <button onclick="
+  if(cartQuantity - 2 <0){
+    console.log('Cart is empty');
+  } else{
+    cartQuantity-=2;
+    console.log('Cart Quantity :',cartQuantity);
+  }
+  ">
+    -2
+  </button>
+   <!-- Remove 3 items from cart -->
+  <button onclick="
+  if(cartQuantity - 3 <0){
+    console.log('Cart is empty');
+  } else{
+    cartQuantity-=3;
+    console.log('Cart Quantity :',cartQuantity);
+  }
+  ">
+    -3
+  </button>
+  <!-- Reset Cart -->
+  <button onclick="
+  cartQuantity = 0; 
+  console.log('Cart Quantity:',cartQuantity);
+  ">
+    Reset Cart
+  </button>
+  <script>
+   let cartQuantity = 0;
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operators</title>
+</head>
+<body>
+  <p>Operators</p>
+
+  <script>
+    // Arithmetic Operators
+    let a = 10;
+    let b = 5;
+
+    console.log("Addition:", a + b);        // 15
+    console.log("Subtraction:", a - b);     // 5
+    console.log("Multiplication:", a * b);  // 50
+    console.log("Division:", a / b);        // 2
+    console.log("Modulus:", a % b);         // 0
+
+    // Assignment Operators
+    let x = 20;
+    x += 5; // x = x + 5
+    console.log("After += :", x);           // 25
+
+    x -= 3; // x = x - 3
+    console.log("After -= :", x);           // 22
+
+    // Comparison Operators
+    // reassigning values for comparison operators
+    a=5;
+    b='5.000';
+    console.log("Is equal:", a === b);       // false
+    console.log("Is not equal:", a !== b);   // true
+    console.log("Is equal:", a == b);       // true because of type conversion from one type to another 
+    console.log("Is not equal:", a != b);   // false
+    console.log("Is greater than:", a > b); // true
+    console.log("Is less than or equal to:", a <= b); // false
+
+    // Logical Operators
+    let condition1 = true;
+    let condition2 = false;
+
+    console.log("AND Operator:", condition1 && condition2); // false
+    console.log("OR Operator:", condition1 || condition2);   // true
+    console.log("NOT Operator:", !condition1);               // false
+
+  </script>
+   
+</body>
+</html>

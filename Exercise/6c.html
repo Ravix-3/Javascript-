@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Probability</title>
+</head>
+<body>
+   <script>
+    const number =Math.random();
+    let result='';
+    let guess ="Heads";
+    if(number <0.5){ 
+      result = "Heads";
+      // console.log("Heads");
+      if(guess === 'Heads'){
+        console.log('Yo win');
+      }
+      else{
+        console.log('You lose');
+      }
+    }
+    else{
+      result = "Tails";
+      // console.log("Tails");
+    if(guess === 'Tails'){
+        console.log("You win");
+      }
+      else{
+        console.log("You lose");
+      }
+    }
+
+    // ternary Operator form of the above code
+   const Message=(number <0.5) 
+   ? ((guess === 'Heads') ? 'You Win' : 'You Lose' )
+   : ((guess === 'Tails') ? 'You Win' :  'You Lose') ;
+   console.log(Message);
+   </script>
+</body>
+</html>

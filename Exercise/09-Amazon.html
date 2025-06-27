@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon shipping Calculator</title>
+</head>
+<body>
+  <p>Amazon shipping Calculator</p>
+  <input type="text" placeholder="Cost of Order" class="js-cost-input" onkeydown="
+  handleCostKeydown(event);
+  ">
+  <button onclick="calculateTotal();">Calculate</button>
+  <p class="js-total-cost">
+  </p>
+  <script>
+
+    String(25);
+    console.log('23' - 5); // 18 Automatic Type Conversion
+    console.log('23' + 5); // '235' Concatenation ,So therefore Dont do math using strings
+    
+    // window object represent the browser window
+    // document object represents the HTML document
+    window.document;
+    window.console.log('Window');
+    
+    function handleCostKeydown(event){
+          if(event.key ==='Enter'){
+            calculateTotal();
+          }
+    }
+    function calculateTotal(){
+      const inputElement = document.querySelector('.js-cost-input');
+      let cost = Number(inputElement.value) ;
+
+      // console.log(cost);
+      
+      if(cost < 40){
+        cost =cost + 10;
+      }
+
+      document.querySelector('.js-total-cost').innerHTML = `Total Cost: $${cost}`;
+    }
+  </script>
+  </body>
+</html>

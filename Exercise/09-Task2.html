@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button onclick="displayResult('heads')">heads</button>
+  <button onclick="displayResult('tails')">tails</button>
+  <p></p>
+
+  
+  <script>
+    function displayResult(choose){
+      if(choose === 'heads'){
+        document.querySelector('p').innerHTML ='You choose:heads';
+      }else if(choose === 'tails'){
+        document.querySelector('p').innerHTML ='You choose:tails';
+      }
+    }
+  </script>
+</body>
+</html>

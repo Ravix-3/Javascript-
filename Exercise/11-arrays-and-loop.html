@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays and Loops</title>
+</head>
+<body>
+  <script>
+    /*
+    const myarray = [1, 2, 3, 4, 5];
+    console.log('Original array:', myarray);
+
+    // array cantain a value that may be a number, string, boolean ,object and arrays
+    [1,'hello', true ,{ name:'socks'},[1,2]]
+
+    console.log(typeof[1,2]);
+    console.log(Array.isArray([1,2]));
+    
+    // lenght method
+    console.log('Array size:',myarray.length);
+
+    // add an element to a list of arrays-end of the array
+    myarray.push(6);
+    console.log('After push:', myarray);
+
+    // remove the last element of the arrays
+    myarray.pop();
+    console.log('After pop:', myarray);
+    
+    // remove an element at a specific index
+    myarray.splice(2,1);
+    console.log('After splice:', myarray);
+    
+    // reverse the array
+    myarray.reverse();
+    console.log('After reverse:', myarray);
+    
+    // sort the array in ascending order
+    myarray.sort((a, b) => a - b);
+    console.log('After sort:', myarray);
+    
+    // find the index of an element
+    console.log('Index of 3:', myarray.indexOf(3));
+    
+    // iterate over an array using a for loop
+    for(let i=0; i<myarray.length; i++){
+      console.log(myarray[i]);
+    }
+    
+    // iterate over an array using a for...of loop
+    for(let element of myarray){
+      console.log(element);
+    }
+    
+    // iterate over an array using a forEach method
+    myarray.forEach(element => console.log(element));
+    */
+
+    
+    let i=1;
+    while(i<=5){
+      console.log(i);
+      i++;
+    }
+    for(let i=0; i<5; i++){
+      console.log(i);
+    }
+
+    // looping through an array using a for...in loop
+    const mytask =[
+      'DSA',
+      'OS',
+      'AI',
+      'ML',
+      'DL'
+    ];
+    for(let index=0; index<mytask.length; index++){
+      console.log(`Task ${index+1}: ${mytask[index]}`);
+    }
+
+    const nums = [1, 2, 3, 4, 5];
+    let sum = 0;
+    for(let i=0; i<nums.length; i++){
+      sum += nums[i];
+    }
+    console.log('Sum of array elements:', sum);
+
+    const arrayDouble = [];
+    for(let i=0; i<nums.length; i++){
+      arrayDouble.push(nums[i]*2);
+    }
+    console.log('Doubled array:',arrayDouble);
+  </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart-Quantity Items</title>
+</head>
+<body>
+  <h1>Cart Quantity</h1>
+  <!-- Show Quantity -->
+<button onclick="console.log('Cart Quantity:', cartQuantity);">
+    Show Quantity
+  </button>
+<!-- Add TO cart -->
+  <button onclick="
+ updateCartQuantity(1, '+');
+">Add To Cart</button>
+<!-- Add 2 items to cart -->
+<button onclick="
+updateCartQuantity(2, '+');
+">
++2
+</button>
+<!--  Add 3 items to cart -->
+<button onclick="
+updateCartQuantity(3, '+');
+">
++3
+</button>
+<!-- Add 4 items to cart -->
+ <button onclick="
+ updateCartQuantity(4, '+');
+ ">
++4
+ </button>
+<!-- Add 5 items to cart -->
+  <button onclick="
+ updateCartQuantity(5, '+');
+  ">
+    +5  
+</button>
+
+<!-- Remove from cart -->
+ <button onclick="
+updateCartQuantity(1, '-');
+ ">
+  Remove from Cart
+ </button>
+ <!-- Remove 2 items from cart -->
+  <button onclick="
+  updateCartQuantity(2, '-');
+  ">
+    -2
+  </button>
+   <!-- Remove 3 items from cart -->
+  <button onclick="
+ updateCartQuantity(3, '-');
+  ">
+    -3
+  </button>
+  <!-- Reset Cart -->
+  <button onclick="
+  cartQuantity = 0; 
+  console.log('Cart Quantity:',cartQuantity);
+  ">
+    Reset Cart
+  </button>
+  <!-- Javascript Codes  -->
+  <script>
+   let cartQuantity = 0;
+   function updateCartQuantity(value, operator){
+      if(operator ==='+')
+      {
+        if(cartQuantity + value > 10) {
+          alert('The Cart is full');
+          return;
+        } else {
+          cartQuantity += value;
+          console.log('Cart Quantity:', cartQuantity);
+        }
+      }
+      else{
+        if(cartQuantity - value < 0){
+        alert('The Cart is empty');
+       } else{
+        cartQuantity-=value;
+        console.log('Cart Quantity :',cartQuantity);
+      }
+      }
+   }
+  </script>
+</body>
+</html>

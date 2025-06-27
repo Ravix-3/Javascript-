@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Flip</title>
+  <style>
+    button{
+      background-color: rgb(189, 4, 4);
+      color: white;
+      border:none;
+      border-radius: 2px;
+      height: 36px;
+      width: 100px;
+      font-weight:bold;
+      cursor: pointer;
+      transition: opacity 0.115s;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0,0.15);
+    }
+    .heads-btn{
+      margin-right: 8px;
+    }
+    button:hover {
+      opacity: 0.6;
+    }
+   
+  </style>
+</head>
+<body>
+  <button onclick="playGame('heads')" class="heads-btn">Heads</button>
+  <button onclick="playGame('tails')" class="tails-btn">Tails</button>
+  <script>
+    // We can use const here since score is a reference
+    // so we can modify it even if it uses const.
+    const score =JSON.parse(localStorage.getItem('score')) || {
+      wins:0,
+      losses:0
+    };
+    function playGame(guess){
+      const randomNumber = Math.random();
+      const result = randomNumber < 0.5 ? 'heads' : 'tails';
+    
+      console.log(`You Guessed:${guess}`);
+      console.log(`Coin Show: ${result}`);
+      if(guess === result){
+        score.wins++;
+      }else{
+        score.losses++;
+      }
+      console.log(score);
+      alert(`Score: Wins: ${score.wins}, Losses: ${score.losses}`);
+      localStorage.setItem('score', JSON.stringify(score));
+    }
+  </script>
+</body>
+</html>

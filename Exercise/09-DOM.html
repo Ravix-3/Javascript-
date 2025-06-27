@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button>
+    Click me
+  </button>
+  <button class="js-button"> Second Button</button>
+  <script>
+    // NOTE 1: Accessing the Body Element using document object and modifying it
+   /*
+    console.log(document.body);
+    document.body.innerHTML = 'Hello Buddy!';
+    console.log(document.title);
+    document.title = 'DOM Manipulation';
+    console.log(document.title);
+  
+    console.log(typeof(document.body));
+    */
+  console.log(document.querySelector('button'));
+  console.log(document.querySelector('button').innerHTML);
+  document.querySelector('button').innerHTML = 'I have been clicked!';
+  // document.querySelector value passed can be a class name, id, or a CSS selector.
+  const buttonModified = document.querySelector('.js-button');
+  console.log(buttonModified);
+
+
+  </script>
+</body>
+</html>
